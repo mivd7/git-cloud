@@ -13,7 +13,11 @@ hero.weapon = {
 
 console.log(hero)
 
-let creature = {}
+let creature = {
+    health: 10
+}
+
+creature.weapon = {}
 
 function rest(creature) {
     console.log(arguments)
@@ -32,6 +36,7 @@ function pickUpItem(creature, item) {
     return creature
 }
 
+console.log(item)
 pickUpItem(creature, item)
 console.log(creature)
 
@@ -52,3 +57,13 @@ function dealDamage(attacker, defender) {
 
 dealDamage(attacker, defender)
 console.log(defender)
+let index = creature.inventory
+
+
+function equipWeapon(creature, index) {
+      index.splice(1,1)
+      return creature
+  }
+
+  equipWeapon(creature, index)
+  console.log(creature)
