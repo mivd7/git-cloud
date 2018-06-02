@@ -14,6 +14,7 @@ hero.weapon = {
 console.log(hero)
 
 let creature = {
+    heroic: true,
     health: 10
 }
 
@@ -57,13 +58,26 @@ function dealDamage(attacker, defender) {
 
 dealDamage(attacker, defender)
 console.log(defender)
+
 let index = creature.inventory
 
-
 function equipWeapon(creature, index) {
-      index.splice(1,1)
+      let selectWeapon = index.splice(2)
+      creature.weapon += selectWeapon
       return creature
   }
 
-  equipWeapon(creature, index)
-  console.log(creature)
+equipWeapon(creature, index)
+console.log(creature)
+
+let heroicCreature = creature.heroic
+
+function doBattle(heroicCreature, creature) {
+    if (typeof(heroicCreature) === "boolean") {
+      console.log('hero status activated')
+    } else {
+      return null
+    }
+  }
+
+  doBattle()
