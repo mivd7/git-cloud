@@ -8,7 +8,7 @@ let hero = {
 
 hero.weapon = {
   type: 'AK-47',
-  damage: 100
+  damage: 10
 }
 
 console.log(hero)
@@ -23,7 +23,7 @@ function rest(creature) {
 
 rest(creature);
 
-let item = ['a']
+let item = ['clothes']
 
 function pickUpItem(creature, item) {
     console.log(arguments)
@@ -35,17 +35,18 @@ function pickUpItem(creature, item) {
 pickUpItem(creature, item)
 console.log(creature)
 
-let attacker = {
-  weaponDamage: 5
-}
-
 let defender = {
   health: 10
 }
 
+let attacker = {
+  weaponDamage: 1
+}
+
 function dealDamage(attacker, defender) {
       console.log(arguments)
-      defender.health -= attacker.valueOf(weaponDamage)
+      let damageDealt = attacker.weaponDamage
+      defender.health -= damageDealt
       return defender
 }
 
