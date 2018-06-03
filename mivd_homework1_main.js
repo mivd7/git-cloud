@@ -56,7 +56,7 @@ attacker.weapon = {
 
 function dealDamage(attacker, defender) {
       console.log(arguments)
-      let damageDealt = attacker.weapon.weaponDamage
+      let damageDealt = attacker.weapon.damage
       defender.health -= damageDealt
       return defender
 }
