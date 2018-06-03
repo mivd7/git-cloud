@@ -1,6 +1,6 @@
 // Variables
 let hero = {
-  name: 'Supermax',
+  name: 'Donald',
   heroic: true,
   inventory: ['a','b'],
   health: 10
@@ -21,26 +21,24 @@ let creature = {
 
 function rest(creature) {
     console.log(arguments)
-    creature.health += 10
-    alert("zzz")
+    alert("zzz, health backup to 10!")
+    creature.health = 10
     return creature
   }
 
-//rest(creature)
+
 console.log(creature)
 
 let item = ['gun','baseball bat', 'molotov cocktail', 'atomic bomb']
 
 function pickUpItem(creature, item) {
-    console.log(arguments)
-    let newItem = item.push('pocketknife', 'sledgehammer')
     alert("picked up new item!")
+    let newItem = item.push('pocketknife', 'sledgehammer')
     creature.inventory = item
     return creature
 }
 
 console.log(item)
-pickUpItem(creature, item)
 console.log(creature)
 
 let defender = {
@@ -63,7 +61,6 @@ function dealDamage(attacker, defender) {
       return defender
 }
 
-dealDamage(attacker, defender)
 console.log(defender)
 
 let index = creature.inventory
@@ -75,7 +72,6 @@ function equipWeapon(creature, index) {
       return creature
   }
 
-equipWeapon(creature, index)
 console.log(creature)
 
 let heroicCreature = {
@@ -91,6 +87,7 @@ let creatureHealth = creature.health
 let turn = true
 
 function doBattle(heroicCreature, creature) {
+    alert('en garde!')
     if (isHeroic == true) {
       console.log('hero status activated')
     } else {
@@ -102,11 +99,13 @@ function doBattle(heroicCreature, creature) {
         //creatureHealth -= hero.weapon.damage
         //console.log('take that f*cker')
         //return creatureHealth
-      }
-
-doBattle()
+  }
 
 //-----*Section3*---
 console.log(hero)
 console.log(creature)
 console.log(heroicCreature)
+
+function displayStats() {
+  document.write("hero")
+}
