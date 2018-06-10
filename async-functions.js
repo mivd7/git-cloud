@@ -6,10 +6,13 @@ function giveItBackLater (value, callback) {
 }
 
 function promiseToGiveItBackLater(value) {
+  return new Promise((resolve) => {
+    giveItBackLater(value, resolve)
+  })
 }
 
-function addSomePromises() {
-
+function addSomePromises(somePromise){
+  
 }
 
 module.exports.giveItBackLater = giveItBackLater

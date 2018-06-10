@@ -1,12 +1,11 @@
 function pathFind(path, object) {
-  const newPath = path
-  const newObject = object
-
-  const objectToArray = Object.values(newObject)
-  console.log(objectToArray[0])
-  return objectToArray[0]
+    if (path.length < 1) {
+      return object
+  } else {
+      return pathFind(path.slice(1), object[path[0]])
+  }
 }
 
-pathFind(["foo"], { foo: "bar" })
+pathFind(["foo", "bar", "foobar"], {foo: "bar"})
 
 module.exports.pathFind = pathFind
