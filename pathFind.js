@@ -6,6 +6,4 @@ function pathFind(path, object) {
   }
 }
 
-pathFind(["foo", "bar", "foobar"], {foo: "bar"})
-
 module.exports.pathFind = pathFind
