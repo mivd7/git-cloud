@@ -11,8 +11,9 @@ function promiseToGiveItBackLater(value) {
   })
 }
 
-function addSomePromises(somePromise){
-  
+function addSomePromises(somePromise) {
+  return somePromise
+    .then(value => value.repeat(2), error => error.repeat(3))
 }
 
 module.exports.giveItBackLater = giveItBackLater

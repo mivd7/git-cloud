@@ -4,7 +4,7 @@ class ShoppingCart {
     }
 
   getItems() {
-      return this.items
+    return this.items
   }
 
 
@@ -17,6 +17,12 @@ class ShoppingCart {
   clear() {
       return this.items = []
      }
+
+  clone() {
+      let copyCart = new ShoppingCart()
+      copyCart.items = this.items.map(item => this.items.slice(item))
+      return copyCart
+  }
 }
 
 module.exports = ShoppingCart
